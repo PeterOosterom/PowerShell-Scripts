@@ -1,19 +1,14 @@
 <#
-
 .SYNOPSIS
     Disable Windows update auto reboot
-
 .DESCRIPTION
     This script disables and sets permissions on registry key and task files to prevent the system
     from re-enabling reboot task
-
 .NOTES
     Script will have to be run again after feature updates. This is because windows wipes the windows directory during it's update process.
     This script was created by SCUR0
-
 .LINK
     https://github.com/SCUR0/PowerShell-Scripts
-
 #>
 
 [cmdletbinding()]
@@ -166,4 +161,4 @@ If (!(test-path $RebootTask)){
     }else{
         Write-Output "Errors were encountered while attempting to make changes. The script was not successful."
     }
-}
+    }
